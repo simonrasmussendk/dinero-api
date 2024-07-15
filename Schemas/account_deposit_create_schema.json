@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "number": {
+            "type": "integer"
+        },
+        "publicStandardNumber": {
+            "type": "integer",
+            "nullable": true
+        },
+        "name": {
+            "type": "string",
+            "minLength": 1
+        },
+        "registrationNumber": {
+            "type": "string",
+            "nullable": true
+        },
+        "accountNumber": {
+            "type": "string",
+            "nullable": true
+        },
+        "swiftNumber": {
+            "type": "string",
+            "nullable": true
+        },
+        "ibanNumber": {
+            "type": "string",
+            "nullable": true
+        }
+    },
+    "required": ["number", "name"],
+    "additionalProperties": false
+}

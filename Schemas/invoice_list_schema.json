@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "properties": {
+        "startDate": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "endDate": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "fields": {
+            "type": "string",
+            "default": "Guid,ContactName,Date,Description"
+        },
+        "freeTextSearch": {
+            "type": "string"
+        },
+        "statusFilter": {
+            "type": "string"
+        },
+        "queryFilter": {
+            "type": "string"
+        },
+        "changesSince": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+        },
+        "deletedOnly": {
+            "type": "boolean",
+            "default": false
+        },
+        "page": {
+            "type": "integer",
+            "default": 0
+        },
+        "pageSize": {
+            "type": "integer",
+            "default": 100,
+            "maximum": 1000
+        },
+        "sort": {
+            "type": "string",
+            "default": "VoucherNumber,VoucherDate"
+        },
+        "sortOrder": {
+            "type": "string",
+            "default": "descending",
+            "enum": ["ascending", "descending"]
+        }
+    }
+}

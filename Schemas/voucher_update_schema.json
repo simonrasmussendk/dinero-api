@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "properties": {
+        "timestamp": {
+            "type": "string",
+            "minLength": 1
+        },
+        "voucherDate": {
+            "type": ["string", "null"],
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "lines": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "type": ["string", "null"]
+                    },
+                    "accountNumber": {
+                        "type": ["integer", "null"]
+                    },
+                    "balancingAccountNumber": {
+                        "type": ["integer", "null"]
+                    },
+                    "amount": {
+                        "type": "number"
+                    },
+                    "accountVatCode": {
+                        "type": ["string", "null"]
+                    },
+                    "balancingAccountVatCode": {
+                        "type": ["string", "null"]
+                    }
+                },
+                "required": ["amount"]
+            }
+        },
+        "fileGuid": {
+            "type": ["string", "null"],
+            "format": "uuid"
+        },
+        "externalReference": {
+            "type": ["string", "null"],
+            "maxLength": 128
+        }
+    },
+    "required": ["timestamp", "lines"]
+}

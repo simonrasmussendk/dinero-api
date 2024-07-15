@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "fields": {
+            "type": "string"
+        },
+        "categoryFilter": {
+            "type": "string",
+            "enum": ["Turnover", "Variable Expenses", "Salary", "Sales Expenses", "Property Expenses", "Administration Expenses", "Travel Expenses", "Depreciation", "Interest Income", "Interest Expenses", "Property", "Turnover Assets", "Financial Assets", "Receivables", "Liquid Assets", "Equity", "Long Term Debt", "Short Term Debt", "Vat Due", "Salary Due", "Analysis", "Not Set", "Tax", "Charge", "IntangibleProperty", ""]
+        }
+    },
+    "additionalProperties": false
+}

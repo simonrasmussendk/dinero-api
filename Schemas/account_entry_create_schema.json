@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "number": {
+            "type": "integer"
+        },
+        "publicStandardNumber": {
+            "type": "integer",
+            "nullable": true
+        },
+        "name": {
+            "type": "string",
+            "minLength": 1
+        },
+        "vatCode": {
+            "type": "string",
+            "minLength": 1
+        }
+    },
+    "required": ["number", "name", "vatCode"],
+    "additionalProperties": false
+}

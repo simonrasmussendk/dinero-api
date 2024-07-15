@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "extensions": {
+            "type": "string"
+        },
+        "uploadedBefore": {
+            "type": "string",
+            "pattern": "^\\d{4}/\\d{2}/\\d{2}$"
+        },
+        "uploadedAfter": {
+            "type": "string",
+            "pattern": "^\\d{4}/\\d{2}/\\d{2}$"
+        },
+        "fileStatus": {
+            "type": "string",
+            "enum": ["All", "Unused", "Used"]
+        },
+        "page": {
+            "type": "integer",
+            "default": 0
+        },
+        "pageSize": {
+            "type": "integer",
+            "default": 1000
+        }
+    },
+    "additionalProperties": false
+}

@@ -1,0 +1,90 @@
+{
+    "type": "object",
+    "properties": {
+        "externalReference": {
+            "type": ["string", "null"],
+            "maxLength": 128
+        },
+        "name": {
+            "type": "string",
+            "minLength": 1
+        },
+        "street": {
+            "type": ["string", "null"]
+        },
+        "zipCode": {
+            "type": ["string", "null"]
+        },
+        "city": {
+            "type": ["string", "null"]
+        },
+        "countryKey": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 2
+        },
+        "phone": {
+            "type": ["string", "null"]
+        },
+        "email": {
+            "type": ["string", "null"],
+            "format": "email"
+        },
+        "webpage": {
+            "type": ["string", "null"]
+        },
+        "attPerson": {
+            "type": ["string", "null"]
+        },
+        "vatNumber": {
+            "type": ["string", "null"]
+        },
+        "eanNumber": {
+            "type": ["string", "null"]
+        },
+        "seNumber": {
+            "type": ["string", "null"]
+        },
+        "pNumber": {
+            "type": ["string", "null"]
+        },
+        "paymentConditionType": {
+            "type": ["string", "null"],
+            "enum": ["Netto", "NettoCash", "CurrentMonthOut"]
+        },
+        "paymentConditionNumberOfDays": {
+            "type": ["integer", "null"]
+        },
+        "isPerson": {
+            "type": "boolean"
+        },
+        "isMember": {
+            "type": "boolean"
+        },
+        "memberNumber": {
+            "type": ["string", "null"]
+        },
+        "useCvr": {
+            "type": "boolean"
+        },
+        "companyTypeKey": {
+            "type": ["string", "null"],
+            "enum": [
+                "EmptyCompanyType", "SoleProprietorship", "PrivateLimitedCompany", "PublicLimitedCompany",
+                "GeneralPartnership", "LimitedPartnership", "LimitedLiabilityCooperative",
+                "LimitedLiabilityVoluntaryAssociation", "LimitedLiabilityCompany",
+                "EntreprenurLimitedCompany", "Union", "VoluntaryUnion", "SmallPersonallyOwnedCompany",
+                "TrustFund", "Others"
+            ]
+        },
+        "invoiceMailOutOptionKey": {
+            "type": ["string", "null"],
+            "enum": ["VAT", "GLN", "SE", "P"]
+        },
+        "contactGuid": {
+            "type": ["string", "null"],
+            "format": "uuid"
+        }
+    },
+    "required": ["name", "countryKey", "isPerson", "isMember", "useCvr"]
+}

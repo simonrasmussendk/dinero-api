@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "currency": {"type": ["string", "null"]},
+        "language": {"type": ["string", "null"], "enum": ["da-DK", "en-GB"]},
+        "externalReference": {"type": ["string", "null"], "maxLength": 128},
+        "description": {"type": ["string", "null"]},
+        "comment": {"type": ["string", "null"]},
+        "date": {"type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+        "productLines": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "description": {"type": ["string", "null"]},
+                    "unit": {"type": ["string", "null"]},
+                    "quantity": {"type": "number"},
+                    "unitPrice": {"type": "number"},
+                    "discount": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+                    "vatAmount": {"type": ["number", "null"]},
+                    "accountNumber": {"type": ["integer", "null"]}
+                },
+                "required": ["quantity", "unitPrice"]
+            }
+        },
+        "address": {"type": ["string", "null"]},
+        "guid": {"type": ["string", "null"], "format": "uuid"},
+        "showLinesInclVat": {"type": ["boolean", "null"]},
+        "invoiceTemplateId": {"type": ["string", "null"], "format": "uuid"},
+        "contactGuid": {"type": ["string", "null"], "format": "uuid"},
+        "paymentConditionNumberOfDays": {"type": ["integer", "null"]},
+        "paymentConditionType": {"type": ["string", "null"], "enum": ["Netto", "NettoCash", "CurrentMonthOut", "Paid"]},
+        "reminderFee": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+        "reminderInterestRate": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+        "isMobilePayInvoiceEnabled": {"type": ["boolean", "null"]},
+        "isPensoPayEnabled": {"type": ["boolean", "null"]}
+    },
+    "required": ["productLines"]
+}

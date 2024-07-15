@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "changesFrom": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "changesTo": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "includePrimo": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "additionalProperties": false
+}
