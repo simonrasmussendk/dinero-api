@@ -18,6 +18,8 @@ pip install requests jsonschema
 
 ## Usage
 
+For details about the available endpoints and their parameters, refer to the official [Dinero API documentation](https://api.dinero.dk/openapi/index.html).
+
 ### Initialization
 
 To start using the DineroAPI, create an instance of the `DineroAPI` class with your API credentials and optionally set the organization ID.
